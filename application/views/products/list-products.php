@@ -59,9 +59,11 @@
 
     <p>&nbsp;</p>
 
-    <h3><a href="<?php base_url() . 'products/new'; ?>">Add a New Product</a></h3>
+    <h3><a href="<?php echo base_url() . 'products/new'; ?>">Add a New Product</a></h3>
 
+    <p>&nbsp;</p>
 
+    <p><strong><a href="<?php echo base_url() . 'reset' ?>">Reset Form</a></strong></p>
 
 </div>
 

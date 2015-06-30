@@ -6,5 +6,10 @@ class Product extends CI_Model
     {
          return $this->db->query("SELECT * FROM products")->result_array();
     }
+
+
+
+
+
 }
 ?>

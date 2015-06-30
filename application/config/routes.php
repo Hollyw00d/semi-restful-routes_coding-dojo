@@ -2,5 +2,6 @@
 
 $route['default_controller'] = 'products';
 $route['404_override'] = '';
+$route['products/new'] = 'products/add';
 
 //end of routes.php

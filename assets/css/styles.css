@@ -32,3 +32,21 @@ table th, table td {
 .border-bottom-right {
     border-width: 0 1px 1px 0;
 }
+
+#add-product input {
+    width: 300px;
+}
+
+#add-product input[type=submit] {
+    width: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
