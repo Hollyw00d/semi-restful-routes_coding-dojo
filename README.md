@@ -1,1 +1,2 @@
-# semi-restful-routes_coding-dojo
+# Semi-RESTful Routes
+>> Coding Dojo Assignment
