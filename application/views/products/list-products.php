@@ -11,6 +11,17 @@
 
     <h1>Products</h1>
 
+    <div class="success">
+        <?php
+        // Show a success message if a product
+        // has been entered into the database
+        echo $this->session->userdata('message');
+
+        // After that unset the session variable
+        $this->session->unset_userdata('message');
+        ?>
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -24,14 +35,14 @@
         </thead>
         <tbody>
             <?php
-            foreach($products as $row)
+            foreach(array_reverse($products) as $row)
             {
             ?>
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo ucfirst($row['name']); ?></td>
                     <td><?php echo $row['description']; ?></td>
-                    <td><?php echo $row['price']; ?></td>
+                    <td class="text-align-right"><?php echo $row['price']; ?></td>
                     <td class="border-bottom">
                         <form action="<?php echo base_url() . 'products/show/' . $row['id']; ?>" method="post">
                             <input type="hidden" name="show"/>

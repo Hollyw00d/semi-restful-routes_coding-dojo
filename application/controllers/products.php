@@ -45,9 +45,12 @@ class Products extends CI_Controller
         }
         else
         {
-      
+            // Create success message session variable
+            $this->session->set_userdata('message', '<p><strong>You have successfully entered a new product into the database!</strong></p>');
 
-            $this->load->view('products/add-product');
+            $this->Product->add_product($this->input->post());
+
+            redirect(base_url());
 
         }
     }
