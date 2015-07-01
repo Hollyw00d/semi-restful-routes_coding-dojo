@@ -55,8 +55,42 @@ class Products extends CI_Controller
         }
     }
 
+    public function show($product_id)
+    {
+        $single_record = $this->Product->show_product($product_id);
+
+        $this->load->view('products/single-record', array('single_record' => $single_record));
+    }
+
+    public function edit($product_id)
+    {
+        $single_record = $this->Product->show_product($product_id);
+
+        $this->load->view('products/edit-single-record', array('single_record' => $single_record));
 
 
+    }
 
+    public function update($product_id)
+    {
+        // Create update record success message
+        // session variable
+        $this->session->set_userdata("update_success", "<p><strong>You have successfully updated record $product_id !</strong></p>");
+
+        $this->Product->update_product($this->input->post(), $product_id);
+
+        redirect(base_url() . 'products/edit/' . $product_id);
+    }
+
+    public function remove($product_id)
+    {
+        // Create a delete record success message
+        // session variable
+        $this->session->set_userdata("delete_success", "<p><strong>You have successfully deleted record $product_id!</strong></p>");
+
+        $this->Product->delete_product($product_id);
+
+        redirect(base_url());
+    }
 }
 ?>

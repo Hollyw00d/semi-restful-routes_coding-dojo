@@ -16,9 +16,14 @@
         // Show a success message if a product
         // has been entered into the database
         echo $this->session->userdata('message');
-
         // After that unset the session variable
         $this->session->unset_userdata('message');
+
+
+        // Show a session variable on a successful
+        // record delete
+        echo $this->session->userdata('delete_success');
+        $this->session->unset_userdata('delete_success');
         ?>
     </div>
 
@@ -44,20 +49,14 @@
                     <td><?php echo $row['description']; ?></td>
                     <td class="text-align-right"><?php echo $row['price']; ?></td>
                     <td class="border-bottom">
-                        <form action="<?php echo base_url() . 'products/show/' . $row['id']; ?>" method="post">
-                            <input type="hidden" name="show"/>
-                            <input type="submit" value="Show"/>
-                        </form>
+                        <a href="<?php echo base_url() . 'products/show/' . $row['id']; ?>">Show</a>
                     </td>
                     <td class="border-bottom">
-                        <form action="<?php echo base_url() . 'products/edit/' . $row['id']; ?>" method="post">
-                            <input type="hidden" name="edit"/>
-                            <input type="submit" value="Edit"/>
-                        </form>
+                        <a href="<?php echo base_url() . 'products/edit/' . $row['id']; ?>">Edit</a>
                     </td>
                     <td class="border-bottom-right">
                         <form action="<?php echo base_url() . 'products/remove/' . $row['id']; ?>" method="post">
-                            <input type="hidden" name="remove"/>
+                            <input type="hidden" name="remove" value="<?php echo $row['id']; ?>"/>
                             <input type="submit" value="Remove"/>
                         </form>
                     </td>

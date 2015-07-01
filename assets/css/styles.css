@@ -54,3 +54,14 @@ table th, table td {
 .success {
     color: green;
 }
+
+#update-form input {
+    width: 700px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#update-form input[type=submit] {
+    width: 150px;
+    text-transform: uppercase;
+}
