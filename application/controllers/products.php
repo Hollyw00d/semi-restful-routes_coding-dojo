@@ -7,8 +7,6 @@ class Products extends CI_Controller
 
         // Load the Product model on all pages
         $this->load->model('Product');
-
-        $this->output->enable_profiler();
     }
 
     public function index()
