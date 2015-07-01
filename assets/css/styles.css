@@ -1,0 +1,67 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tbody tr:nth-child(odd) {
+    background: #eee;
+}
+
+table thead tr {
+    background: #ccc;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.border-bottom {
+    border-width: 0 0 1px 0;
+}
+
+.border-bottom-right {
+    border-width: 0 1px 1px 0;
+}
+
+.text-align-right {
+    text-align: right !important;
+}
+
+#add-product input {
+    width: 300px;
+}
+
+#add-product input[type=submit] {
+    width: 100px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+#update-form input {
+    width: 700px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#update-form input[type=submit] {
+    width: 150px;
+    text-transform: uppercase;
+}
